@@ -1,5 +1,5 @@
 FROM nginx
 
-RUN rm /etc/nginx/sites-enabled/default.conf
+RUN rm /etc/nginx/conf.d/default.conf
 
-COPY sites-enabled/ /etc/nginx/sites-enabled
+COPY sites-enabled/short_url.conf /etc/nginx/conf.d/
