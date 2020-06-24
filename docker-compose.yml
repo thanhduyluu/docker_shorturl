@@ -25,4 +25,4 @@ services:
     environment:
       POSTGRES_PASSWORD: "2410"
       POSTGRES_USER: "postgres"
-      POSTGRES_DB: "login"\
+      POSTGRES_DB: "login"
