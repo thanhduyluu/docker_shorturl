@@ -25,6 +25,6 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: "2410"
       POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "2410"
       POSTGRES_DB: "login"
