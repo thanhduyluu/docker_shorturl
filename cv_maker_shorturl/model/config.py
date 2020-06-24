@@ -1,10 +1,10 @@
-from flask import Flask
+dokfrom flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 # config your postgresql DB
 POSTGRES = {
-    'user': 'newai_admin',
-    'pw': 'c72de94716593dad4acb912774ca890a1c43eb76',
+    'user': 'postgres',
+    'pw': '2410',
     'db': 'postgres',
     'host': 'localhost',
     'port': '5432',
