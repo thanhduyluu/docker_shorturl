@@ -1,4 +1,4 @@
-dokfrom flask import Flask
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 # config your postgresql DB

@@ -6,8 +6,6 @@ services:
     build: ./cv_maker_shorturl
     expose:
       - "8000"
-    links:
-      - postgres:postgres
     env_file: 
       - .env
 
@@ -18,21 +16,3 @@ services:
       - "80:80"
     links:
       - cv_maker_shorturl:cv_maker_shorturl
-
-  data:
-    image: postgres:latest
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    command: "true"
-
-  postgres:
-    restart: always
-    image: postgres:latest
-    volumes:
-      - db-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-
-volumes:
-  db-data:
-  web-data:
