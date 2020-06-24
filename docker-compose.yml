@@ -2,6 +2,7 @@ version: '3'
 
 services:
   flask:
+    container_name: flask
     restart: always
     build: ./cv_maker_shorturl
     env_file: 
