@@ -2,7 +2,7 @@ version: '3'
 
 services:
   flask:
-    container_name: flask
+    container_name: flask_api
     restart: always
     build: ./cv_maker_shorturl
     env_file: 
@@ -13,12 +13,18 @@ services:
       - "8000:8000"
     depends_on:
       - postgres
+    networks:
+      docker-network:
+        aliases:
+          - flask_webapp
 
   nginx:
     restart: always
     build: ./nginx
     ports:
       - "80:80"
+    networks:
+      - docker-network
 
   postgres:
     image: postgres
@@ -29,3 +35,5 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "2410"
       POSTGRES_DB: "login"
+networks:
+    docker-network:
