@@ -1,6 +1,0 @@
-dokcer server {
-
-    location / {
-        proxy_pass http://flask:8000;
-    }
-}
