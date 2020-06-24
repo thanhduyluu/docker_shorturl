@@ -1,15 +1,17 @@
 version: '3'
 
 services:
-  cv_maker_shorturl:
+  flask:
     restart: always
     build: ./cv_maker_shorturl
-    expose:
-      - "8000"
     env_file: 
       - .env
     links:
-      - db
+      - postgres
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
 
   nginx:
     restart: always
@@ -19,7 +21,7 @@ services:
     links:
       - cv_maker_shorturl:cv_maker_shorturl
 
-  db:
+  postgres:
     image: postgres
     restart: always
     environment:
