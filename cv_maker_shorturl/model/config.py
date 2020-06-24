@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 POSTGRES = {
     'user': 'postgres',
     'pw': '2410',
-    'db': 'postgres',
+    'db': 'login',
     'host': '0.0.0.0',
     'port': '5432',
 }

@@ -16,3 +16,11 @@ services:
       - "80:80"
     links:
       - cv_maker_shorturl:cv_maker_shorturl
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "2410"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "login"
