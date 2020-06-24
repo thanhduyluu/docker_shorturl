@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 # config your postgresql DB
 POSTGRES = {
-    'user': 'hy',
-    'pw': '2410',
-    'db': 'login',
+    'user': 'newai_admin',
+    'pw': 'c72de94716593dad4acb912774ca890a1c43eb76',
+    'db': 'postgres',
     'host': 'localhost',
     'port': '5432',
 }
