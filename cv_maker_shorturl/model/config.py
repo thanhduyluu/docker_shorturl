@@ -6,7 +6,7 @@ POSTGRES = {
     'user': 'postgres',
     'pw': '2410',
     'db': 'postgres',
-    'host': 'localhost',
+    'host': '0.0.0.0',
     'port': '5432',
 }
 
