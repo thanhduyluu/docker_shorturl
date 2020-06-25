@@ -19,10 +19,11 @@ services:
           - flask_webapp
 
   nginx:
-    restart: always
     build: ./nginx
     ports:
       - "80:80"
+    depends_on:
+            - flask
     networks:
       - docker-network
 
@@ -35,5 +36,6 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "2410"
       POSTGRES_DB: "login"
+
 networks:
     docker-network:
