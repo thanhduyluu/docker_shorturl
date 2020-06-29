@@ -2,6 +2,7 @@ version: '3'
 
 services:
   flask:
+    restart: always
     container_name: flask_webapp
     restart: always
     build: ./cv_maker_shorturl
@@ -19,6 +20,7 @@ services:
           - flask_webapp
 
   webserver:
+    restart: always
     image: nginx:mainline-alpine
     container_name: webserver
     restart: unless-stopped
@@ -36,6 +38,7 @@ services:
 
   postgres:
     image: postgres
+    container_name: postgres
     restart: always
     ports:
       - "5433:5432"
