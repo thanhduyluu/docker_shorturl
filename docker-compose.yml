@@ -57,7 +57,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email ltduy24101997@gmail.com --agree-tos --no-eff-email --staging -d cvdemo1.jobnet.com
+    command: certonly --webroot --webroot-path=/var/www/html --email ltduy24101997@gmail.com --agree-tos --no-eff-email --force-renewal -d cvdemo1.jobnet.com
 
 volumes:
   certbot-etc:
