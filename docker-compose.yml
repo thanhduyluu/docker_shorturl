@@ -46,6 +46,8 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "2410"
       POSTGRES_DB: "login"
+    networks:
+      docker-network
   certbot:
     image: certbot/certbot
     container_name: certbot
