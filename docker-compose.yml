@@ -60,10 +60,12 @@ services:
     command: certonly --webroot --webroot-path=/var/www/html --email ltduy24101997@gmail.com --agree-tos --no-eff-email --force-renewal -d cvdemo1.jobnet.com
 
 volumes:
-  certbot-etc:
-  certbot-var:
   web-root:
     driver: local
+    driver_opts:
+      type: none
+      device: /root/docker_shorturl/views/
+      o: bind
 networks:
     docker-network:
       driver: bridge
