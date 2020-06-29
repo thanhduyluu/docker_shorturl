@@ -18,7 +18,7 @@ services:
         aliases:
           - flask_webapp
 
-   webserver:
+  webserver:
     image: nginx:mainline-alpine
     container_name: webserver
     restart: unless-stopped
