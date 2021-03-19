@@ -13,7 +13,7 @@ objcrypt==0.6
 pbkdf2==1.3
 pdf2image==1.13.1
 pika==1.1.0
-Pillow==7.1.2
+Pillow==8.1.1
 psycopg2-binary==2.8.5
 pyaes==1.6.1
 redis==3.5.3
